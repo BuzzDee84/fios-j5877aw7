@@ -1,3 +1,8 @@
+/* Ablauf: Formular nach diesem Datum nicht mehr nutzbar */
+if (Date.now() > new Date("2026-11-11T23:59:59+01:00").getTime()) {
+  document.body.textContent = "Dieses Formular ist nicht mehr verfügbar. Bitte melden Sie sich bei uns: fios.immobilien@gmx.de";
+  throw new Error("expired");
+}
 (function () {
   "use strict";
   var C = window.Core;
