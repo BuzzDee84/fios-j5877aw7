@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Mieterselbstauskunft Lützowstraße 24</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>Mieterselbstauskunft</h1>
+    <div class="object">
+      <span><b>Objekt</b> Lützowstraße 24, 47057 Duisburg, 1. OG</span>
+      <span><b>Wohnung</b> ca. 69 m², 2 Zimmer</span>
+      <span><b>Vermieter</b> FiOs Immobilien eGbR</span>
+    </div>
+    <p class="intro">Diese Angaben sind die Grundlage für die Entscheidung über den Mietvertrag. Bitte nehmen Sie sich die Zeit, alles wahrheitsgemäß auszufüllen. Sie werden vertraulich behandelt und nur zur Prüfung dieser Bewerbung verwendet.</p>
+    <p class="note">So funktioniert es: Sie füllen die fünf Abschnitte aus und tippen am Ende auf „PDF erstellen“. Das PDF entsteht in Ihrem Browser. Ihre Angaben werden nicht an uns gesendet und nirgends gespeichert. Das fertige PDF schicken Sie uns anschließend selbst, zum Beispiel per WhatsApp oder E-Mail. Gehaltsnachweise und SCHUFA-Auskunft bitte erst auf Anforderung.</p>
+  </div>
+
+  <form id="form" novalidate class="wrap tight">
+
+    <section class="sec">
+      <header><h2>1. Angaben zu den Personen</h2><span>* Pflichtfeld</span></header>
+      <div class="body"><div class="cols" id="persons"></div></div>
+    </section>
+
+    <section class="sec">
+      <header><h2>2. Haushalt</h2></header>
+      <div class="body">
+        <div class="cols">
+          <div class="f">
+            <label for="hhnetto" class="req">Gesamt-Haushaltsnettoeinkommen pro Monat</label>
+            <div class="eur"><input type="number" id="hhnetto" inputmode="decimal" min="0" step="1"></div>
+            <span class="hint">Summe aller im Haushalt lebenden Personen.</span>
+          </div>
+          <div class="f">
+            <label for="personen" class="req">Für wie viele Personen wird die Wohnung benötigt?</label>
+            <input type="number" id="personen" inputmode="numeric" min="1" max="12" step="1">
+          </div>
+        </div>
+        <div class="f">
+          <span class="lab">Weitere Personen im Haushalt (Kinder, Verwandte, sonstige Mitbewohner)</span>
+          <span class="hint">Nur ausfüllen, wenn sie nicht oben bereits als Mietinteressent oder Mitmieter stehen.</span>
+        </div>
+        <div class="members" id="members"></div>
+        <div><button type="button" class="ghost" id="addMember">+ Person hinzufügen</button></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <header><h2>3. Erklärungen</h2><span>Bitte jede Frage beantworten</span></header>
+      <div class="body" id="questions"></div>
+    </section>
+
+    <section class="sec">
+      <header><h2>4. Einverständnis</h2></header>
+      <div class="body">
+        <div class="consent-wrap">
+          <label class="consent"><input type="checkbox" id="c_dsgvo"><span class="req">Ich bin / wir sind mit der Verarbeitung der angegebenen Daten zum Zweck der Anbahnung und Durchführung des Mietvertrages gemäß Art. 6 Abs. 1 lit. b) und f) DSGVO einverstanden.</span></label>
+          <label class="consent"><input type="checkbox" id="c_schufa"><span class="req">Ich bin / wir sind damit einverstanden, eine SCHUFA-Selbstauskunft direkt bei der SCHUFA einzuholen und dem Vermieter zu übergeben. Sie gilt als Voraussetzung für das Zustandekommen des Mietvertrags.</span></label>
+          <div class="f indent">
+            <label for="schufaBis">Übergabe der SCHUFA-Auskunft bis spätestens</label>
+            <input type="date" id="schufaBis">
+          </div>
+          <label class="consent"><input type="checkbox" id="c_bonitaet"><span>Ich gestatte dem Vermieter, eine Bonitätsprüfung über mich durchführen zu lassen.</span></label>
+          <label class="consent"><input type="checkbox" id="c_referenz"><span>Ich / wir gestatte(n) eine telefonische Referenzanfrage beim bisherigen Vermieter (Kontaktdaten siehe Abschnitt 1).</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <header><h2>5. Bestätigung</h2></header>
+      <div class="body">
+        <p class="warn"><b>Wichtiger Hinweis:</b> Ein etwaiger Mietvertrag kommt nur unter der Bedingung zustande, dass die Angaben der Wahrheit entsprechen. Stellt sich nach Abschluss des Mietvertrages heraus, dass einzelne Angaben falsch sind, sind die Mieter zur sofortigen Räumung und Herausgabe des Mietobjektes verpflichtet und haben dem Vermieter jeden mittelbaren und unmittelbaren Schaden zu ersetzen.</p>
+        <div class="cols">
+          <div class="f"><label for="ort" class="req">Ort</label><input type="text" id="ort" autocomplete="address-level2"></div>
+          <div class="f"><label for="datum" class="req">Datum</label><input type="date" id="datum"></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="c_wahr"><span class="req">Ich bestätige / wir bestätigen, dass alle Angaben vollständig und wahrheitsgemäß sind.</span></label>
+        <div class="f">
+          <span class="lab">Unterschrift (freiwillig)</span>
+          <span class="hint">Mit Finger oder Maus unterschreiben. Ohne Unterschrift bleibt im PDF eine leere Zeile zum späteren Unterschreiben.</span>
+        </div>
+        <div class="sigs" id="sigs"></div>
+        <div class="actions">
+          <button type="submit" class="primary" id="make">PDF erstellen</button>
+          <span class="err" id="formErr" role="alert" hidden></span>
+        </div>
+      </div>
+    </section>
+  </form>
+
+  <section class="sec" id="resultSec" hidden>
+    <header><h2>Ihr PDF ist fertig</h2><span id="fileInfo"></span></header>
+    <div class="body result">
+      <ol class="steps">
+        <li>Tippen Sie auf „PDF senden“ (Handy) oder „PDF herunterladen“ (Computer).</li>
+        <li>Schicken Sie die Datei über den Weg zurück, über den Sie die Einladung zur Besichtigung erhalten haben.</li>
+      </ol>
+      <div class="actions">
+        <button type="button" class="primary" id="share" hidden>PDF senden</button>
+        <button type="button" class="primary" id="download">PDF herunterladen</button>
+        <a id="open" href="#" target="_blank" rel="noopener" hidden>PDF im Browser öffnen</a>
+        <button type="button" class="ghost" id="back">Angaben ändern</button>
+      </div>
+      <span class="ok" id="resMsg" role="status"></span>
+    </div>
+  </section>
+
+  <footer>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+</div>
+<script src="jspdf.umd.min.js"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
