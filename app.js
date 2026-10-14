@@ -1,7 +1,15 @@
-/* Ablauf: Formular nach diesem Datum nicht mehr nutzbar */
-if (Date.now() > new Date("2026-11-11T23:59:59+01:00").getTime()) {
-  document.body.textContent = "Dieses Formular ist nicht mehr verfügbar. Bitte melden Sie sich bei uns: fios.immobilien@gmx.de";
+/* Konfiguration kommt aus config.js (Ablaufdatum, Kontakt, Objektdaten). */
+var CFG = window.CONFIG || {};
+if (CFG.ablauf && Date.now() > new Date(CFG.ablauf + "T23:59:59").getTime()) {
+  document.body.textContent = "Dieses Formular ist nicht mehr verfügbar. Bitte melden Sie sich bei uns: " + (CFG.email || "");
   throw new Error("expired");
+}
+if (CFG.objekt) {
+  [["obj-adresse", CFG.objekt.adresse], ["obj-wohnung", CFG.objekt.wohnung], ["obj-vermieter", CFG.objekt.vermieter]].forEach(function (p) {
+    var e = document.getElementById(p[0]);
+    if (e && p[1]) e.lastChild.nodeValue = " " + p[1];
+  });
+  if (CFG.objekt.adresse) document.title = "Mieterselbstauskunft " + CFG.objekt.adresse.split(",")[0];
 }
 (function () {
   "use strict";
