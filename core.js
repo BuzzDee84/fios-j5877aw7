@@ -3,9 +3,11 @@
 (function (g) {
   "use strict";
 
+  var CFG = (g && g.CONFIG) || {};
+  var CO = CFG.objekt || {};
   var OBJEKT = {
-    adresse: "Lützowstraße 24, 47057 Duisburg, 1. OG",
-    vermieter: "FiOs Immobilien eGbR"
+    adresse: CO.adresse || "Lützowstraße 24, 47057 Duisburg, 1. OG",
+    vermieter: CO.vermieter || "FiOs Immobilien eGbR"
   };
 
   var PERSON_FIELDS = [
